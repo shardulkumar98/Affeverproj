@@ -1,0 +1,26 @@
+import React from "react";
+import { Table } from "antd";
+interface ITableProps {
+  data: Array<IData>;
+  columns: Array<IColumns>;
+}
+export interface IStatus {
+  title: string;
+}
+interface IData {
+  key: React.Key;
+  appointerEmail?: string;
+  appointedAs?: string;
+  totalAmount?: string;
+}
+interface IColumns {
+  title: string;
+  dataIndex: string;
+}
+
+const TableComponent: React.FC<ITableProps> = ({
+  data,
+  columns,
+}: ITableProps) => <Table columns={columns} dataSource={data} />;
+
+export default TableComponent;
