@@ -14,7 +14,7 @@ import {
   Form,
   ForgotText,
   BannerImage,
-} from 'styles/pages/Login/index'
+} from 'styles/views/Login/index'
 
 const LogIn = () => {
   const { control } = useForm()

@@ -13,7 +13,7 @@ import {
   HeadingText,
   Form,
   BannerImage,
-} from 'styles/pages/ChangePassword'
+} from 'styles/views/ChangePassword'
 
 const ChangePassword = () => {
   const { control } = useForm()

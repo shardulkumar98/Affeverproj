@@ -1,17 +1,29 @@
+import { MainContainer, Wrapper } from 'styles/components/Sidebar'
+import data from 'components/SideBar/data'
+import SidebarCard from 'components/Cards/Sidebar'
+import { useState } from 'react'
+
 const SideBar = () => {
+  const [isOpen, setIsOpen] = useState(false)
   return (
-    <div>
-      <ul>
-        <li>Dashboard</li>
-        <li>Connections</li>
-        <li>Schema</li>
-        <li>Issuance</li>
-        <li>Verifications</li>
-        <li>Workflow</li>
-        <li>Value added services</li>
-        <li>Wallets</li>
-      </ul>
-    </div>
+    <MainContainer>
+      <Wrapper>
+        {data?.map((item) => (
+          <SidebarCard
+            key={item.id}
+            image={item?.icon}
+            title={item?.title}
+            path={item?.path}
+            showModal={(value: boolean) => setIsOpen(value)}
+          />
+        ))}
+      </Wrapper>
+      {isOpen && (
+        <div>
+          <div>Comming Soon</div>
+        </div>
+      )}
+    </MainContainer>
   )
 }
 

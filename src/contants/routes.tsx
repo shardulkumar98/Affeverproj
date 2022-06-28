@@ -1,6 +1,6 @@
 import Login from 'views/Login'
 import ChangePassword from 'views/ChangePassword'
-import Connections from 'views/Dashboard/Connections'
+import Dashboard from 'pages/dashboard'
 
 export const LoginRoute = {
   component: Login,
@@ -15,13 +15,13 @@ export const ForgetPasswordRoute = {
   exact: true,
   restricted: false,
 }
-export const ConnectionsRoute = {
-  component: Connections,
-  path: '/connections',
+export const DashboardRoute = {
+  component: Dashboard,
+  path: '/dashboard',
   exact: true,
   restricted: false,
 }
 
-const ROUTES = [LoginRoute, ForgetPasswordRoute, ConnectionsRoute]
+const ROUTES = [LoginRoute, ForgetPasswordRoute, DashboardRoute]
 
 export default ROUTES
